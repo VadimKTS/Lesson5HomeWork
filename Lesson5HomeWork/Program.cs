@@ -6,8 +6,70 @@
         {
             // task 2                     --------------------------------------
 
+            string myStringForTask2 = "«Никогда не ошибается тот, кто ничего не делает». Теодор Рузвельт";
+            myStringForTask2 = myStringForTask2.Trim();
+            //string shortestWordInString = "";
+            //string longestWordInString = "";
+            char[] charArrayFromString = myStringForTask2.ToArray();
 
 
+            
+            int spacesInString = 0;
+
+            for (int i = 0; i < myStringForTask2.Length; i++)
+            {
+                if ( char.IsWhiteSpace(charArrayFromString[i]) )
+                {
+                    spacesInString++;
+                }
+            }
+            string[] arrayOfWords = new string[spacesInString+1];
+            int n = 0;
+
+            for (int i = 0; i < charArrayFromString.Length; i++)
+            {
+                if ( char.IsWhiteSpace(charArrayFromString[i]) )
+                {
+                    n++;
+                }
+                else if (char.IsPunctuation(charArrayFromString[i]))
+                {
+                    
+                }
+                else
+                {
+                    arrayOfWords[n] += charArrayFromString[i];
+                }
+            }
+
+            string shortestWordInString = arrayOfWords[0];
+            string longestWordInString = arrayOfWords[0];
+
+            //for (int i = 0; i < arrayOfWords.Length; i++)
+            //{
+                for (int j = 0; j < arrayOfWords.Length-1; j++)
+                {
+                    if ( String.CompareOrdinal(arrayOfWords[j], arrayOfWords[j+1]) >= 0)
+                    {
+                        longestWordInString = arrayOfWords[j];              //  исправить логику, не работает
+                    }
+                    else
+                    {
+                        shortestWordInString = arrayOfWords[j];
+                    }
+                    
+                }
+            //}
+
+            //for (int i = 0; i < arrayOfWords.Length; i++)
+            //{
+            //    Console.Write($"{arrayOfWords[i]} ");
+            //}
+            
+            Console.WriteLine(myStringForTask2);
+            Console.WriteLine($"Самое короткое слово: {shortestWordInString}\nСамое длинное слово: {longestWordInString}");
+
+            
 
             // task 3                     --------------------------------------
 
