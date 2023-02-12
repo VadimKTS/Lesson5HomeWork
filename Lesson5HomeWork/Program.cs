@@ -6,10 +6,8 @@
         {
             // task 2                     --------------------------------------
 
-            string myStringForTask2 = "«Никогда не ошибается тот, кто ничего не делает». Теодор Рузвельт";
+            string myStringForTask2 = "«Никогда не ошибается тот, кто ничего нЕ делает». Теодор Рузвельт";
             myStringForTask2 = myStringForTask2.Trim();
-            //string shortestWordInString = "";
-            //string longestWordInString = "";
             char[] charArrayFromString = myStringForTask2.ToArray();
 
 
@@ -44,33 +42,22 @@
 
             string shortestWordInString = arrayOfWords[0];
             string longestWordInString = arrayOfWords[0];
-
-            //for (int i = 0; i < arrayOfWords.Length; i++)
-            //{
-                for (int j = 0; j < arrayOfWords.Length-1; j++)
+            for (int j = 0; j < arrayOfWords.Length; j++)
+            {
+                if (arrayOfWords[j].Length >= longestWordInString.Length)
                 {
-                    if ( String.CompareOrdinal(arrayOfWords[j], arrayOfWords[j+1]) >= 0)
-                    {
-                        longestWordInString = arrayOfWords[j];              //  исправить логику, не работает
-                    }
-                    else
-                    {
-                        shortestWordInString = arrayOfWords[j];
-                    }
-                    
+                    longestWordInString = arrayOfWords[j];
                 }
-            //}
+                else if (arrayOfWords[j].Length <= shortestWordInString.Length)
+                {
+                    shortestWordInString = arrayOfWords[j];
+                }
+            }
 
-            //for (int i = 0; i < arrayOfWords.Length; i++)
-            //{
-            //    Console.Write($"{arrayOfWords[i]} ");
-            //}
-            
             Console.WriteLine(myStringForTask2);
             Console.WriteLine($"Самое короткое слово: {shortestWordInString}\nСамое длинное слово: {longestWordInString}");
 
             
-
             // task 3                     --------------------------------------
 
 
