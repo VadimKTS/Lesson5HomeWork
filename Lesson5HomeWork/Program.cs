@@ -122,7 +122,7 @@ namespace Lesson5HomeWork
             //    }
             //}
             //// Решение
-            
+
             //int[] equalChars = new int[arrayOfWordsFromChars.Length];
             //for (int i = 0; i < arrayOfWordsFromChars.Length; i++)
             //{
@@ -167,8 +167,68 @@ namespace Lesson5HomeWork
 
             // task 4*                    --------------------------------------
 
-            //string myStringForTask4 = "«Если тебе тяжело, значит ты поднимаешься в гору. Если тебе легко, значит ты летишь в пропасть». Генри Форд ololo";
+        //    string myStringForTask4 = "«Если тебе тяжело, значит ты поднимаешься в гору. Если тебе легко, значит ты летишь в пропасть». Ololo Генри Форд";
+        //    myStringForTask4 = myStringForTask4.Trim();
+        //    Console.WriteLine(myStringForTask4 + "\n");
+        //    int spacesInString = 0;
 
+        //    for (int i = 0; i < myStringForTask4.Length; i++)
+        //    {
+        //        if (char.IsWhiteSpace(myStringForTask4[i]))
+        //        {
+        //            spacesInString++;
+        //        }
+        //    }
+        //    string[] arrayOfWords = new string[spacesInString + 1];
+        //    int n = 0;
+
+        //    for (int i = 0; i < myStringForTask4.Length; i++)
+        //    {
+        //        if (char.IsWhiteSpace(myStringForTask4[i]))
+        //        {
+        //            n++;
+        //        }
+        //        else if (char.IsPunctuation(myStringForTask4[i]))
+        //        {
+
+        //        }
+        //        else
+        //        {
+        //            arrayOfWords[n] += myStringForTask4[i];
+        //        }
+        //    }
+
+        //inputAgain:
+        //    Console.WriteLine($"Введите порядковый номер слова в строке:");
+        //    int inputNumber = Convert.ToInt32(Console.ReadLine()) - 1;
+        //    string palindrom = "";
+        //    StringBuilder reverseString = new StringBuilder();
+        //    if (inputNumber >= arrayOfWords.Length)
+        //    {
+        //        Console.WriteLine($"В строке всего {arrayOfWords.Length} слов.");
+        //        goto inputAgain;
+        //    }
+
+        //    for (int j = arrayOfWords[inputNumber].Length - 1; j >= 0; j--)
+        //    {
+        //        reverseString.Append(arrayOfWords[inputNumber][j]);
+        //    }
+
+        //    if (arrayOfWords[inputNumber].ToLower().Equals(reverseString.ToString().ToLower()) && arrayOfWords[inputNumber].Length > 1)
+        //    {
+        //        palindrom = arrayOfWords[inputNumber];
+        //        Console.WriteLine($"Слово  \"{arrayOfWords[inputNumber]}\" палиндром.\n" +
+        //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
+        //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
+        //        if (continueOrNot == 1) { goto inputAgain; }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Слово  \"{arrayOfWords[inputNumber]}\" не является палиндромом.\n" +
+        //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
+        //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
+        //        if ( continueOrNot == 1 ) { goto inputAgain; }
+        //    }
 
 
             // task 5                     --------------------------------------
