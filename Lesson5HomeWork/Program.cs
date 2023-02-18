@@ -7,50 +7,23 @@ namespace Lesson5HomeWork
     {
         static void Main(string[] args)
         {
-            // task 2                     --------------------------------------
+            //// task 2                     --------------------------------------
 
             //string myStringForTask2 = "«Никогда не ошибается тот, кто ничего нЕ делает». Теодор Рузвельт";
-            //myStringForTask2 = myStringForTask2.Trim();
-            //char[] charArrayFromString = myStringForTask2.ToArray();
-            //int spacesInString = 0;
+            //string[] myStringArrayForTask2 = myStringForTask2.Split(" ");
 
-            //for (int i = 0; i < myStringForTask2.Length; i++)
+
+            //string shortestWordInString = myStringArrayForTask2[0];
+            //string longestWordInString = myStringArrayForTask2[0];
+            //for (int j = 0; j < myStringArrayForTask2.Length; j++)
             //{
-            //    if ( char.IsWhiteSpace(charArrayFromString[i]) )
+            //    if (myStringArrayForTask2[j].Length >= longestWordInString.Length)
             //    {
-            //        spacesInString++;
+            //        longestWordInString = myStringArrayForTask2[j];
             //    }
-            //}
-            //string[] arrayOfWords = new string[spacesInString+1];
-            //int n = 0;
-
-            //for (int i = 0; i < charArrayFromString.Length; i++)
-            //{
-            //    if ( char.IsWhiteSpace(charArrayFromString[i]) )
+            //    else if (myStringArrayForTask2[j].Length <= shortestWordInString.Length)
             //    {
-            //        n++;
-            //    }
-            //    else if (char.IsPunctuation(charArrayFromString[i]))
-            //    {
-
-            //    }
-            //    else
-            //    {
-            //        arrayOfWords[n] += charArrayFromString[i];
-            //    }
-            //}
-
-            //string shortestWordInString = arrayOfWords[0];
-            //string longestWordInString = arrayOfWords[0];
-            //for (int j = 0; j < arrayOfWords.Length; j++)
-            //{
-            //    if (arrayOfWords[j].Length >= longestWordInString.Length)
-            //    {
-            //        longestWordInString = arrayOfWords[j];
-            //    }
-            //    else if (arrayOfWords[j].Length <= shortestWordInString.Length)
-            //    {
-            //        shortestWordInString = arrayOfWords[j];
+            //        shortestWordInString = myStringArrayForTask2[j];
             //    }
             //}
 
@@ -58,182 +31,68 @@ namespace Lesson5HomeWork
             //Console.WriteLine($"Самое короткое слово: {shortestWordInString}\nСамое длинное слово: {longestWordInString}");
 
 
-            // task 3                     --------------------------------------
+            //// task 3                     --------------------------------------
 
-            //string myStringForTask3 = "«Мы находимся здесь, чтобы внести bbbbbb свой вклад в этот мир. Иначе зачем мы здесь?» Стив Джобс ffffff ab f 978345 fghj  ";
-            //myStringForTask3 = myStringForTask3.Trim();
-            //char[] charArrayFromString = myStringForTask3.ToArray();
-            //int spacesInString = 0;
+            string myStringForTask3 = "«Мы находимся здесь, чтобы внести bbbbbb свой вклад в этот мир. Иначе зачем мы здесь?» Стив Джобс ffffff ab f 978345 fghj";
+            string[] myStringArrayForTask3 = myStringForTask3.Split(" ");
 
-            //for (int i = 0; i < myStringForTask3.Length; i++)
-            //{
-            //    if (char.IsWhiteSpace(charArrayFromString[i]))
-            //    {
-            //        spacesInString++;
-            //    }
-            //}
+            // Решение (вторая попытка)
 
-            //int[] lettersInWordsArrary = new int[spacesInString + 1];
-            //int b = 0;
-            //int lettersInWords = 0;
-            //for (int i = 0; i < myStringForTask3.Length; i++)
-            //{
-            //    if (char.IsWhiteSpace(charArrayFromString[i]))
-            //    {
-            //        lettersInWordsArrary[b] = lettersInWords;
-            //        lettersInWords = 0;
-            //        b++;
-            //    }
-            //    else if (i == myStringForTask3.Length - 1)
-            //    {
-            //        lettersInWordsArrary[b] = lettersInWords + 1;
-            //    }
-            //    else if (char.IsPunctuation(charArrayFromString[i]))
-            //    {
+            string wordForTask3 = myStringArrayForTask3[0];
 
-            //    }
-            //    else
-            //    {
-            //        lettersInWords++;
-            //    }
-            //}
-
-            //char[][] arrayOfWordsFromChars = new char[spacesInString + 1][];    //зубчатый массив
-            //for (int i = 0; i < lettersInWordsArrary.Length; i++)
-            //{
-            //    arrayOfWordsFromChars[i] = new char[lettersInWordsArrary[i]];
-            //}
-
-            //int j = 0;
-            //int k = 0;
-            //for (int n = 0; n < charArrayFromString.Length; n++)
-            //{
-            //    if (char.IsLetter(charArrayFromString[n]) || char.IsDigit(charArrayFromString[n]))
-            //    {
-            //        arrayOfWordsFromChars[j][k] = charArrayFromString[n];
-            //        //Console.Write($"{arrayOfWordsFromChars[j][k]} ");
-            //        k++;
-            //    }
-            //    else if (char.IsWhiteSpace(charArrayFromString[n]))
-            //    {
-            //        //Console.Write("\t");
-            //        j++;
-            //        k = 0;
-            //    }
-            //}
-            //// Решение
-
-            //int[] equalChars = new int[arrayOfWordsFromChars.Length];
-            //for (int i = 0; i < arrayOfWordsFromChars.Length; i++)
-            //{
-            //    k = 0;
-            //    for (j = 0; j < arrayOfWordsFromChars[i].Length; j++)
-            //    {
-            //        for (int n = 0; n < arrayOfWordsFromChars[i].Length; n++)
-            //        {
-            //            if (arrayOfWordsFromChars[i][j].Equals(arrayOfWordsFromChars[i][n]) && j == (arrayOfWordsFromChars[i].Length - 1))
-            //            {
-            //                k++;
-            //                equalChars[i] = k;
-            //            }
-            //            else if (j == (arrayOfWordsFromChars[i].Length - 1) && i == (arrayOfWordsFromChars[i].Length - 1))
-            //            {
-            //                equalChars[i] = k;
-            //            }
-            //            else if (arrayOfWordsFromChars[i][j].Equals(arrayOfWordsFromChars[i][n]))
-            //            {
-            //                k++;
-            //            }
-            //        }
-            //    }
-            //}
-            //int maxEquals = 0;
-            //int itemWithmaxEquals = 0;
-            //for (int i = 0; i < equalChars.Length; i++)
-            //{
-            //    if (equalChars[i] > maxEquals)
-            //    {
-            //        maxEquals = equalChars[i];
-            //        itemWithmaxEquals = i;
-            //    }
-            //}
-
-            //Console.Write("\nСлово, в котором число различных символов минимально: ");
-            //for (int i = 0; i < arrayOfWordsFromChars[itemWithmaxEquals].Length; i++)
-            //{
-            //    Console.Write(arrayOfWordsFromChars[itemWithmaxEquals][i]);
-            //}
+            for (int i = 1; i < myStringArrayForTask3.Length; i++)
+            {
+                if (myStringArrayForTask3[i].Distinct().Count() < wordForTask3.Distinct().Count())
+                {
+                    wordForTask3 = myStringArrayForTask3[i];
+                }
+            }
+            Console.WriteLine($"Слово, в котором число различных символов минимально: {wordForTask3}");
 
 
             // task 4*                    --------------------------------------
 
-        //    string myStringForTask4 = "«Если тебе тяжело, значит ты поднимаешься в гору. Если тебе легко, значит ты летишь в пропасть». Ololo Генри Форд";
-        //    myStringForTask4 = myStringForTask4.Trim();
-        //    Console.WriteLine(myStringForTask4 + "\n");
-        //    int spacesInString = 0;
+            //    string myStringForTask4 = "«Если тебе тяжело, значит ты поднимаешься в гору. Если тебе легко, значит ты летишь в пропасть». Ololo Генри Форд";
+            //    string[] myStringArrayForTask4 = myStringForTask4.Split(" ");
+            //    Console.WriteLine(myStringForTask4 + "\n");
 
-        //    for (int i = 0; i < myStringForTask4.Length; i++)
-        //    {
-        //        if (char.IsWhiteSpace(myStringForTask4[i]))
-        //        {
-        //            spacesInString++;
-        //        }
-        //    }
-        //    string[] arrayOfWords = new string[spacesInString + 1];
-        //    int n = 0;
+            //inputAgain:
+            //    Console.WriteLine($"Введите порядковый номер слова в строке:");
+            //    int inputNumber = Convert.ToInt32(Console.ReadLine()) - 1;
+            //    string palindrom = "";
+            //    StringBuilder reverseString = new StringBuilder();
+            //    if (inputNumber >= myStringArrayForTask4.Length)
+            //    {
+            //        Console.WriteLine($"В строке всего {myStringArrayForTask4.Length} слов.");
+            //        goto inputAgain;
+            //    }
 
-        //    for (int i = 0; i < myStringForTask4.Length; i++)
-        //    {
-        //        if (char.IsWhiteSpace(myStringForTask4[i]))
-        //        {
-        //            n++;
-        //        }
-        //        else if (char.IsPunctuation(myStringForTask4[i]))
-        //        {
+            //    for (int j = myStringArrayForTask4[inputNumber].Length - 1; j >= 0; j--)
+            //    {
+            //        reverseString.Append(myStringArrayForTask4[inputNumber][j]);
+            //    }
 
-        //        }
-        //        else
-        //        {
-        //            arrayOfWords[n] += myStringForTask4[i];
-        //        }
-        //    }
-
-        //inputAgain:
-        //    Console.WriteLine($"Введите порядковый номер слова в строке:");
-        //    int inputNumber = Convert.ToInt32(Console.ReadLine()) - 1;
-        //    string palindrom = "";
-        //    StringBuilder reverseString = new StringBuilder();
-        //    if (inputNumber >= arrayOfWords.Length)
-        //    {
-        //        Console.WriteLine($"В строке всего {arrayOfWords.Length} слов.");
-        //        goto inputAgain;
-        //    }
-
-        //    for (int j = arrayOfWords[inputNumber].Length - 1; j >= 0; j--)
-        //    {
-        //        reverseString.Append(arrayOfWords[inputNumber][j]);
-        //    }
-
-        //    if (arrayOfWords[inputNumber].ToLower().Equals(reverseString.ToString().ToLower()) && arrayOfWords[inputNumber].Length > 1)
-        //    {
-        //        palindrom = arrayOfWords[inputNumber];
-        //        Console.WriteLine($"Слово  \"{arrayOfWords[inputNumber]}\" палиндром.\n" +
-        //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
-        //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
-        //        if (continueOrNot == 1) { goto inputAgain; }
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"Слово  \"{arrayOfWords[inputNumber]}\" не является палиндромом.\n" +
-        //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
-        //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
-        //        if ( continueOrNot == 1 ) { goto inputAgain; }
-        //    }
+            //    if (myStringArrayForTask4[inputNumber].ToLower().Equals(reverseString.ToString().ToLower()) && myStringArrayForTask4[inputNumber].Length > 1)
+            //    {
+            //        palindrom = myStringArrayForTask4[inputNumber];
+            //        Console.WriteLine($"Слово  \"{myStringArrayForTask4[inputNumber]}\" палиндром.\n" +
+            //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
+            //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
+            //        if (continueOrNot == 1) { goto inputAgain; }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"Слово  \"{myStringArrayForTask4[inputNumber]}\" не является палиндромом.\n" +
+            //        $"Введите 1 чтобы проверить другое слово. 0 - закончить");
+            //        int continueOrNot = Convert.ToInt32(Console.ReadLine());
+            //        if (continueOrNot == 1) { goto inputAgain; }
+            //    }
 
 
             // task 5                     --------------------------------------
 
-            //string myStringForTask5 = "«Успех – паршивый учитель. Он заставляет умных людей думать, что они не могут проиграть». Билл Гейтс";
+            //Console.WriteLine("Введите строку для задачи №5:");
+            //string myStringForTask5 = Console.ReadLine();
             //StringBuilder resultString = new StringBuilder(myStringForTask5);
             //for (int i = 0; i < myStringForTask5.Length; i++)
             //{
